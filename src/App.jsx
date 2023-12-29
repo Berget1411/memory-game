@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
+import StartPage from './components/StartPage';
 
 function App() {
-  const [difficulty, setDifficulty] = useState('easy');
+  const [gameStatus, setGameStatus] = useState('start');
+  const [difficulty, setDifficulty] = useState(undefined);
   const [pokemons, setPokemons] = useState(undefined);
-  console.log(pokemons);
 
   async function fetchPokemons(amount) {
     const pokemonList = [];
@@ -29,7 +30,11 @@ function App() {
     }
   }, [difficulty]);
 
-  return <div className='app'></div>;
+  return (
+    <div className='app'>
+      <StartPage setDifficulty={setDifficulty} />
+    </div>
+  );
 }
 
 export default App;

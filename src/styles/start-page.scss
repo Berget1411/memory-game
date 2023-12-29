@@ -1,0 +1,42 @@
+@use 'index.scss';
+
+.start-page {
+  @include index.flex-center();
+  flex-direction: column;
+  margin: 0 40px;
+  height: 800px;
+}
+
+h1 {
+  font-size: 4em;
+  color: var(--primary-color);
+  text-shadow: -0.06em 0 0.08em var(--secondary-color),
+    0.06em 0 0.08em var(--secondary-color),
+    0 0.06em 0.08em var(--secondary-color),
+    0 -0.06em 0.08em var(--secondary-color),
+    -0.06em 0.06em 0.08em var(--secondary-color),
+    0.06em 0.06em 0.08em var(--secondary-color),
+    -0.06em -0.06em 0.08em var(--secondary-color),
+    0.06em -0.06em 0.08em var(--secondary-color);
+  margin: 40px 0px 50px 0px;
+}
+
+.select-difficulty {
+  @include index.flex-center();
+  gap: 20px;
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 1.4em;
+  color: var(--secondary-color);
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
