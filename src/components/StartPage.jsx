@@ -1,15 +1,36 @@
 import logo from '../assets/pokemon_logo.png';
 import '../styles/start-page.scss';
 
-function StartPage({ setDifficulty }) {
+function StartPage({ setDifficulty, setGameStatus }) {
   return (
     <div className='start-page'>
       <img src={logo} alt='' />
       <h1>Memory Game</h1>
       <div className='select-difficulty'>
-        <button onClick={() => setDifficulty('easy')}>Easy</button>
-        <button onClick={() => setDifficulty('medium')}>Medium</button>
-        <button onClick={() => setDifficulty('hard')}>Hard</button>
+        <button
+          onClick={() => {
+            setDifficulty('easy');
+            setGameStatus('game');
+          }}
+        >
+          Easy
+        </button>
+        <button
+          onClick={() => {
+            setDifficulty('medium');
+            setGameStatus('game');
+          }}
+        >
+          Medium
+        </button>
+        <button
+          onClick={() => {
+            setDifficulty('easy');
+            setGameStatus('hard');
+          }}
+        >
+          Hard
+        </button>
       </div>
     </div>
   );

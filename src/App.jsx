@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 
 function App() {
   const [gameStatus, setGameStatus] = useState('start');
-  const [difficulty, setDifficulty] = useState(undefined);
+  const [difficulty, setDifficulty] = useState('easy');
   const [pokemons, setPokemons] = useState(undefined);
 
   async function fetchPokemons(amount) {
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className='app'>
-      <StartPage setDifficulty={setDifficulty} />
+      <StartPage setDifficulty={setDifficulty} setGameStatus={setGameStatus} />
       <Footer />
     </div>
   );
