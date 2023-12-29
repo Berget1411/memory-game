@@ -25,8 +25,8 @@ function StartPage({ setDifficulty, setGameStatus }) {
         </button>
         <button
           onClick={() => {
-            setDifficulty('easy');
-            setGameStatus('hard');
+            setDifficulty('hard');
+            setGameStatus('game');
           }}
         >
           Hard
