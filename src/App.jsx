@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import StartPage from './components/StartPage';
+import Footer from './components/Footer';
 
 function App() {
   const [gameStatus, setGameStatus] = useState('start');
@@ -33,6 +34,7 @@ function App() {
   return (
     <div className='app'>
       <StartPage setDifficulty={setDifficulty} />
+      <Footer />
     </div>
   );
 }
