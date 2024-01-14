@@ -10,6 +10,7 @@
 h1 {
   font-size: 4em;
   color: var(--primary-color);
+  text-align: center;
   text-shadow: -0.06em 0 0.08em var(--secondary-color),
     0.06em 0 0.08em var(--secondary-color),
     0 0.06em 0.08em var(--secondary-color),
@@ -23,6 +24,7 @@ h1 {
 
 .select-difficulty {
   @include index.flex-center();
+  flex-wrap: wrap;
   gap: 20px;
 }
 

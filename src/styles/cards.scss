@@ -1,0 +1,95 @@
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+
+.card {
+  border-radius: 10px;
+  color: white;
+  font-size: 1.4em;
+  text-align: center;
+  cursor: pointer;
+  width: 180px;
+  height: 250px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+  img {
+    width: 180px;
+  }
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card .active {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.front {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, filter 0.2s;
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+  }
+}
+
+.back {
+  transform: rotateY(180deg);
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .card {
+    width: 135px;
+    height: 187.5px;
+    font-size: 1em;
+
+    img {
+      width: 140px;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .card {
+    width: 90px;
+    height: 125px;
+    font-size: 1em;
+
+    img {
+      width: 140px;
+    }
+  }
+}
