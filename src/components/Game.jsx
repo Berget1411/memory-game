@@ -4,7 +4,7 @@ import uniqid from 'uniqid';
 
 import '../styles/game.scss';
 import Loading from './Loading';
-import GameScreen from './gameScreen';
+import GameScreen from './GameScreen';
 
 function Game({
   difficulty,
