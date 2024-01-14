@@ -20,10 +20,8 @@ function Game({
   useEffect(() => {
     setIsLoading(true);
     fetchPokemons().then((data) => {
-      setTimeout(() => {
-        setPokemon(data);
-        setIsLoading(false);
-      }, 1000);
+      setPokemon(data);
+      setIsLoading(false);
     });
   }, [restart]);
 
